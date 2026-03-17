@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #09090b;
+  --surface: #111113;
+  --surface2: #18181b;
+  /* Fixed: Lowered opacity significantly so the grid is subtle */
+  --grid-color: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --border2: rgba(255, 255, 255, 0.2);
+  --ink: #fafaf9;
+  --muted: #a1a1aa;
+  --subtle: #3f3f46;
+  --accent: #ffffff;
+  --accent2: #e9e9e9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Syne", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Animations --- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fixed: Use this for the classes below */
+.anim-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0; /* Prevents flickering before animation starts */
+}
+
+.anim-fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.delay-100ms {
+  animation-delay: 0.1s;
+}
+.delay-200ms {
+  animation-delay: 0.2s;
+}
+.delay-300ms {
+  animation-delay: 0.3s;
+}
+.delay-400ms {
+  animation-delay: 0.4s;
+}
+
+/* --- Hero Background Grid --- */
+.hero-grid {
+  /* Using --grid-color for a professional, subtle look */
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 50%,
+    black 0%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+/* --- UI Elements --- */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* --- Timeline --- */
+.tl-item {
+  position: relative;
+  padding-left: 24px;
+  border-left: 1px solid var(--subtle);
+}
+
+.tl-item::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: var(--bg);
+  border: 2px solid var(--subtle);
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+.tl-item:hover::before {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  transform: scale(1.2);
+}
+
+/* Scroll reveal logic */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
