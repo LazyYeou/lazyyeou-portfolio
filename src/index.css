@@ -4,7 +4,6 @@
   --bg: #09090b;
   --surface: #111113;
   --surface2: #18181b;
-  /* Fixed: Lowered opacity significantly so the grid is subtle */
   --grid-color: rgba(255, 255, 255, 0.05);
   --border: rgba(255, 255, 255, 0.1);
   --border2: rgba(255, 255, 255, 0.2);
@@ -88,7 +87,7 @@ a {
   mask-image: radial-gradient(
     ellipse 60% 60% at 50% 50%,
     black 0%,
-    transparent 100%
+    transparent 120%
   );
   z-index: 0;
 }

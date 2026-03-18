@@ -41,7 +41,7 @@ export default function Navbar() {
         className="font-['Instrument_Serif'] text-[22px] italic transition-colors duration-200 hover:text-[var(--accent)]"
         style={{ color: "var(--ink)" }}
       >
-        Nunyeou
+        LazyYeou
       </a>
 
       <ul className="hidden md:flex gap-9 list-none">
@@ -67,15 +67,6 @@ export default function Navbar() {
           );
         })}
       </ul>
-
-      <a
-        href="#contact"
-        className="text-[12px] font-bold tracking-[0.1em] uppercase px-5 py-2.5 rounded
-          transition-opacity duration-200 hover:opacity-85"
-        style={{ background: "var(--accent)", color: "#09090b" }}
-      >
-        Hire Me
-      </a>
     </nav>
   );
 }

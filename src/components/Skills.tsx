@@ -18,16 +18,15 @@ export default function Skills() {
           style={{ fontSize: "clamp(36px,4vw,54px)", fontWeight: 400 }}
         >
           My{" "}
-          <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-            toolkit
-          </em>
+          <em style={{ fontStyle: "italic", color: "var(--accent)" }}>tools</em>
         </h2>
         <p
           className="text-[14px] leading-[1.8] max-w-[540px] mb-16"
           style={{ color: "var(--muted)" }}
         >
-          Technologies and tools I use to bring ideas to life — from first
-          commit to final deploy.
+          Some of the technologies I’ve been working with recently. I’m always
+          eager to learn new tools and expand my skill set, so this list is by
+          no means exhaustive.
         </p>
       </div>
 
@@ -50,12 +49,6 @@ export default function Skills() {
             }
           >
             <div className="flex items-center gap-2.5 mb-5">
-              <div
-                className="w-[34px] h-[34px] rounded-[9px] flex items-center justify-center text-base flex-shrink-0"
-                style={{ background: cat.bg }}
-              >
-                {cat.icon}
-              </div>
               <span
                 className="text-[11px] font-bold tracking-[0.15em] uppercase"
                 style={{ color: "var(--accent)" }}

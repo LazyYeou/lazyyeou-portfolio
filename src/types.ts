@@ -1,3 +1,5 @@
+import type React from "react";
+
 export interface Project {
   id: string;
   num: string;
@@ -9,7 +11,6 @@ export interface Project {
 }
 
 export interface SkillCategory {
-  icon: string;
   label: string;
   pills: string[];
   bg: string;
@@ -22,7 +23,7 @@ export interface TimelineItem {
 }
 
 export interface ContactLink {
-  icon: string;
+  icon: React.ElementType;
   label: string;
   value: string;
   href: string;

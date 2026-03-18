@@ -34,39 +34,37 @@ export default function About() {
           <div className="space-y-5 mb-10">
             {[
               <>
-                I'm a{" "}
+                Hello I'm{" "}
+                <strong
+                  className="font-semibold"
+                  style={{ color: "var(--ink)" }}
+                >
+                  Ridu
+                </strong>{" "}
+                {""}a{" "}
                 <strong
                   className="font-semibold"
                   style={{ color: "var(--ink)" }}
                 >
                   Computer Science student @ Institut Teknologi Bandung
                 </strong>{" "}
-                fascinated by how code can move things in the real world.
-                Currently learning how to combine AI with drones (UAVs) to build
-                smarter software. I don't just want to build apps; I want to
-                build things that think and fly.
-              </>,
-              <>
-                My approach:{" "}
-                <strong
-                  className="font-semibold"
-                  style={{ color: "var(--ink)" }}
-                >
-                  start with the problem
+                I’m driven by curiosity to understand how the world expands
+                through code and technology. Currently, I’m exploring Data
+                Science, Web Development, and UAV/Robotics, building the skills
+                to create systems that connect intelligence with real-world
+                impact.
+                <br /> <br />
+                Recent roles:
+                <br />
+                <strong className="font-medium" style={{ color: "var(--ink)" }}>
+                  1. Backend Developer Staff at Parade Wisuda Oktober ITB 2025
+                  <br />
+                  2. Frontend Developer Staff at Aku Masuk ITB 2026
+                  <br />
+                  3. Web Developer Staff at Parade Wisuda April ITB 2026
+                  <br />
+                  4. VTOL Robotic System Control Team Member at Aksantara ITB
                 </strong>
-                , not the technology. I've shipped full-stack apps with real
-                users and learned that the best code is the code nobody notices.
-              </>,
-              <>
-                I'm drawn to projects at the intersection of{" "}
-                <strong
-                  className="font-semibold"
-                  style={{ color: "var(--ink)" }}
-                >
-                  clean engineering and human-centered design
-                </strong>
-                . Currently exploring machine learning and cloud architecture to
-                level up my stack.
               </>,
             ].map((text, i) => (
               <p
